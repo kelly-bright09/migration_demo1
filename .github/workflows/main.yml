@@ -2,7 +2,7 @@ name: Sync from Bitbucket
 
 on:
   push:
-    branches: [ "main", "migration-sync" ]
+    branches: [ "main", "migration" ]
   pull_request:
     branches: [ "main" ]
   schedule:
@@ -18,7 +18,7 @@ jobs:
       - name: Checkout GitHub repository
         uses: actions/checkout@v3
         with:
-          ref: migration-sync
+          ref: migration
           persist-credentials: true
           fetch-depth: 0
 
